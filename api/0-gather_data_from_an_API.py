@@ -8,7 +8,7 @@ def getName():
     """ getting user name """
     payload = {'id': sys.argv[1]}
     dataTwo = requests.get('https://jsonplaceholder.typicode.com/users',
-                                         params=payload)
+                              params=payload)
     JDataTwo = dataTwo.json()
     # print(JDataTwo[0]['name']
     return JDataTwo[0]['name']
