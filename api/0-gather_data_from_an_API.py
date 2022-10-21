@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """ just using some extra modules """
-import sys
 import requests
-
+import sys
 
 
 def getName():
@@ -25,7 +24,7 @@ def getTask():
         com = int(sys.argv[1])
         if JData[i]['userId'] == com:
             taskToDo += 1
-            if JData[i]['completed'] == True:
+            if JData[i]['completed'] is True:
                 ToDoList.append(JData[i]['title'])
                 taskDone += 1
     # print(taskToDo)
@@ -34,10 +33,10 @@ def getTask():
     print("Employee {} is done with tasks({}/{}):".format(getName(), taskDone, taskToDo))
     Lvalue = len(ToDoList)
     for j in range(0, Lvalue):
-        print("\t{}".format(ToDoList[j])) 
+        print("\t{}".format(ToDoList[j]))
 
 """ addding docs everywhre """
 
 if __name__ == "__main__":
     """ calling """
-    getTask();
+    getTask()
