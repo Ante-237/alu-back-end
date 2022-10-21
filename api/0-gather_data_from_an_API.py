@@ -36,7 +36,7 @@ def getTask():
           .format(getName(), taskDone, taskToDo))
     Lvalue = len(ToDoList)
     for j in range(0, Lvalue):
-        print("\t{}".format(ToDoList[j]))
+        print("  {}".format(ToDoList[j]))
 
 """ addding docs everywhre """
 
