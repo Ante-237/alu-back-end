@@ -8,7 +8,7 @@ def getName():
     """ getting user name """
     payload = {'id': sys.argv[1]}
     dataTwo = requests.get('https://jsonplaceholder.typicode.com/users',
-              params=payload)
+                          params=payload)
     JDataTwo = dataTwo.json()
     # print(JDataTwo[0]['name']
     return JDataTwo[0]['name']
@@ -33,7 +33,7 @@ def getTask():
     # print(taskDone)
     # print(ToDoList)
     print("Employee {} is done with tasks({}/{}):"
-        .format(getName(), taskDone, taskToDo))
+          .format(getName(), taskDone, taskToDo))
     Lvalue = len(ToDoList)
     for j in range(0, Lvalue):
         print("\t{}".format(ToDoList[j]))
