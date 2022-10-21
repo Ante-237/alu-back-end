@@ -1,14 +1,13 @@
 #!/usr/bin/python3
-
+""" just using some extra modules """
 import sys
 import requests
-"""modules needed to operate """
 
-payload = {'id': sys.argv[1]}
 
 
 def getName():
     """ getting user name """
+    payload = {'id': sys.argv[1]}
     dataTwo = requests.get('https://jsonplaceholder.typicode.com/users', params = payload)
     JDataTwo = dataTwo.json()
     # print(JDataTwo[0]['name']
@@ -37,7 +36,8 @@ def getTask():
     for j in range(0, Lvalue):
         print("\t{}".format(ToDoList[j])) 
 
-
+""" addding docs everywhre """
 
 if __name__ == "__main__":
+    """ calling """
     getTask();
